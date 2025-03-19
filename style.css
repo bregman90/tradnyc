@@ -1,9 +1,9 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 7 equal columns for each day */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items to the next line */
   gap: 16px;
-  min-width: 100%; 
-  font-family: Arial, sans-serif; 
+  min-width: 100%; /* Ensure the container spans the full width */
+  font-family: Arial, sans-serif;
 }
 
 /* Each day's column */
@@ -29,7 +29,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 12px;
-  padding: 16px; /* Added padding to create buffer around the title */
+  padding: 10px 30px; /* Added padding to create buffer around the title */
   border-radius: 8px; /* Rounded corners for the background */
   background-color: #d3d3d3; /* Light grey background for all days */
   color: black; /* Black text */
@@ -44,7 +44,7 @@
 /* Event styling */
 .event {
   margin-bottom: 12px;
-  padding: 8px;
+  padding: 8px 20px 8px 8px;
   border-left: 4px solid #007bff;
   background-color: #eef5ff;
   border-radius: 4px;
