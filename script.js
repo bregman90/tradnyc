@@ -76,13 +76,26 @@ function displayEvents(events) {
     if (dayColumn) {
       const eventItem = document.createElement('div');
       eventItem.classList.add('event');
-      eventItem.innerHTML = `
-        <strong>${event['Venue Name']}</strong> (${event.Cadence})<br>
-        ${event.Time}<br>
-        ${event.Borough}<br>
-        ${event.Link ? `<a href="${event.Link}" target="_blank">Google Maps</a>` : ''}
-      `;
+
+      // Build the event description
+      let eventDescription = `<strong>${event['Venue Name']}</strong><br>`;
+      
+      // Add Cadence only if it's not "Weekly"
+      if (event.Cadence !== "Weekly") {
+        eventDescription += `(${event.Cadence})<br>`;
+      }
+      
+      // Add Time and Borough
+      eventDescription += `${event.Time} @ ${event.Borough}`;
+
+      // Add Google Maps link if available
+      if (event.Link) {
+        eventDescription += `<br><a href="${event.Link}" target="_blank">Google Maps</a>`;
+      }
+
+      eventItem.innerHTML = eventDescription;
       dayColumn.appendChild(eventItem);
     }
   });
 }
+
