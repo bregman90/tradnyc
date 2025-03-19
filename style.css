@@ -1,0 +1,72 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 7 equal columns for each day */
+  gap: 16px;
+  min-width: 100%; 
+  font-family: Arial, sans-serif; 
+}
+
+/* Each day's column */
+.day-column {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling specifically for Sunday */
+#Sunday {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Ensure Sunday title spans both columns */
+.day-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  padding: 16px; /* Added padding to create buffer around the title */
+  border-radius: 8px; /* Rounded corners for the background */
+  background-color: #d3d3d3; /* Light grey background for all days */
+  color: black; /* Black text */
+  text-align: center; /* Center the text horizontally */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 50px; /* Ensure some height to center the title */
+  grid-column: span 2
+}
+
+/* Event styling */
+.event {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-left: 4px solid #007bff;
+  background-color: #eef5ff;
+  border-radius: 4px;
+}
+
+/* Note for musicians with a larger font size */
+.note {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem; /* Increase font size for the note */
+}
+
+.note a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
