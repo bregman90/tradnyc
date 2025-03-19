@@ -87,11 +87,12 @@ function displayEvents(events) {
       }
       
       // Add Time and Borough
-      eventDescription += `${event.Time} @ ${event.Borough}`;
+      eventDescription += `${event.Time}<br>`;
+      eventDescription += `<span class="borough">${event.Borough}</span>`;
 
       // Add Google Maps link if available
       if (event.Link) {
-        eventDescription += `<br><a href="${event.Link}" target="_blank">Map</a>`;
+        eventDescription += `<br><a href="${event.Link}" target="_blank"> (Map)</a>`;
       }
 
       eventItem.innerHTML = eventDescription;
