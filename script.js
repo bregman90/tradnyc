@@ -34,7 +34,7 @@ function displayEvents(events) {
       eventItem.innerHTML = `
         <strong>${event['Venue Name']}</strong> (${event.Cadence})<br>
         ${event.Time} @ ${event.Borough}
-        ${event.Link ? `<br><a href="${event.Link}" target="_blank">More Info</a>` : ''}
+        ${event.Link ? `<br><a href="${event.Link}" target="_blank">Google Maps</a>` : ''}
       `;
       dayColumn.appendChild(eventItem);
     }
