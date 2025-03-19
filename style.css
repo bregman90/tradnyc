@@ -16,6 +16,10 @@
   flex-direction: column;
 }
 
+.today-column {
+  background-color: #e6f7e6; /* Light green background for today's column */
+}
+
 /* Styling specifically for Sunday */
 #Sunday {
   grid-column: span 2;

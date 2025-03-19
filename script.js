@@ -72,9 +72,14 @@ function parseTime(timeString) {
 }
 
 function displayEvents(events) {
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   events.forEach(event => {
     const dayColumn = document.getElementById(event.Weekday);
     if (dayColumn) {
+      if (event.Weekday === today) {
+        dayColumn.classList.add('today-column');
+      }
+      
       const eventItem = document.createElement('div');
       eventItem.classList.add('event');
 
