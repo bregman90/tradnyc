@@ -79,7 +79,7 @@ function displayEvents(events) {
       if (event.Weekday === today) {
         dayColumn.classList.add('today-column');
       }
-      
+
       const eventItem = document.createElement('div');
       eventItem.classList.add('event');
 

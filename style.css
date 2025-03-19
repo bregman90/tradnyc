@@ -6,6 +6,19 @@
   font-family: Arial, sans-serif;
 }
 
+h1 {
+  margin-bottom: 10px; /* Reduce space below the title */
+}
+
+.intro-text {
+  font-style: italic;
+  font-size: 1.5rem; /* Increase the font size */
+  color: #333; /* Dark grey */
+  margin-top: 3px;
+  margin-bottom: 20px;
+  text-align: left; /* Align to the left */
+}
+
 /* Each day's column */
 .day-column {
   background-color: white;
