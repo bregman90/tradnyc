@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(response => response.text())
     .then(csvData => {
       const events = parseCSV(csvData);
-      sortEventsByTime(events);  // Sort the events before displaying
+      sortEvents(events);  // Sort the events before displaying
       displayEvents(events);
       adjustDayLayout();
     })
@@ -33,9 +33,16 @@ function parseCSV(csvData) {
 }
 
 // Sort the events by start time (assuming Time is in a format like "HH:MM AM/PM")
-function sortEventsByTime(events) {
+function sortEvents(events) {
+  const areaOrder = ['Manhattan', 'Brooklyn', 'Queens', 'Bronx'];
 
   events.sort((a, b) => {
+    const areaAIndex = areaOrder.indexOf(a.Area);
+    const areaBIndex = areaOrder.indexOf(b.Area);
+
+    if (areaAIndex < areaBIndex) return -1; // "a" should come before "b"
+    if (areaAIndex > areaBIndex) return 1;  // "b" should come before "a"
+
     const timeA = parseTime(a.Time); // Use parseTime to convert event time
     const timeB = parseTime(b.Time); // Use parseTime to convert event time
     return timeA - timeB; // Compare times (this works because Date objects can be compared by their milliseconds)
