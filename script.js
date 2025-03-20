@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => {
       console.error('Error fetching data:', error);
     });
+
+  generateKeyItems()
 });
 
 function parseCSV(csvData) {
@@ -70,8 +72,23 @@ function parseTime(timeString) {
   return parsedDate;
 }
 
+function generateKeyItems() {
+  const keyRow = document.getElementById('key-row');
+  
+  for (const borough in colorMap) {
+    if (colorMap.hasOwnProperty(borough)) {
+      const keyItem = document.createElement('div');
+      keyItem.classList.add('key-item');
+      keyItem.style.backgroundColor = colorMap[borough];
+      keyItem.innerText = borough;
+      keyRow.appendChild(keyItem);
+    }
+  }
+}
+
 function displayEvents(events) {
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+
   events.forEach(event => {
     const dayColumn = document.getElementById(event.Weekday);
     if (dayColumn) {
@@ -81,6 +98,10 @@ function displayEvents(events) {
 
       const eventItem = document.createElement('div');
       eventItem.classList.add('event');
+
+      const area = event.Area;
+      eventItem.style.backgroundColor = colorMap[area] || '#f0f0f0'; // Default gray if area not found
+
 
       // Build the event description
       let eventDescription = `<strong>${event['Venue Name']}</strong><br>`;
