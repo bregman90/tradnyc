@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   generateKeyItems()
+  adjustDayLayout();
+
+  // Add event listener to adjust layout on window resize
+  window.addEventListener('resize', adjustDayLayout);
 });
 
 function parseCSV(csvData) {
@@ -128,6 +132,23 @@ function displayEvents(events) {
 
       eventItem.innerHTML = eventDescription;
       dayColumn.appendChild(eventItem);
+    }
+  });
+}
+
+function adjustDayLayout() {
+  // Get all day-column elements (Monday, Tuesday, etc.)
+  const dayColumns = document.querySelectorAll('.day-column');
+
+  // Loop through each day column
+  dayColumns.forEach(dayColumn => {
+    const items = dayColumn.children; // Get all child elements (event items)
+
+    // If the screen width is greater than 600px and the number of items is greater than 6
+    if (window.innerWidth > 768 && items.length > 6) {
+      dayColumn.classList.add('two-column');  // Apply two-column layout
+    } else {
+      dayColumn.classList.remove('two-column');  // Remove two-column layout
     }
   });
 }
