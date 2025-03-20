@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://images.squarespace-cdn.com/content/v1/5743511fd210b844041ed5ff/1464109877085-IMZ37PVADNFUNP8BHCA2/Welcome+to+Mary+O%27s?format=2500w');
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5743511fd210b844041ed5ff/1487776542229-9EYVE6ZWWWLEA3FPWCTW/IMG_8433.jpg?format=2500w');
   background-size: cover; /* Scales image to cover entire viewport */
   background-repeat: no-repeat; /* Prevents image from repeating */
   background-attachment: fixed; /* Optional: keeps background fixed on scroll */
@@ -104,5 +104,15 @@ h1 {
 
 .note a:hover {
   text-decoration: underline;
+}
+
+
+.photo-cred {
+  font-style: italic;
+  font-size: 1.5rem; /* Increase the font size */
+  color: white;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  text-align: left; /* Align to the left */
 }
 
