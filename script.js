@@ -34,7 +34,7 @@ function parseCSV(csvData) {
 
 // Sort the events by start time (assuming Time is in a format like "HH:MM AM/PM")
 function sortEvents(events) {
-  const areaOrder = ['Manhattan', 'Brooklyn', 'Queens', 'Bronx'];
+  const areaOrder = ['Manhattan', 'Brooklyn', 'Queens', 'The Bronx'];
 
   events.sort((a, b) => {
     const areaAIndex = areaOrder.indexOf(a.Area);
