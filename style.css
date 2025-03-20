@@ -143,3 +143,14 @@ h1 {
   justify-content: center;
   height: 40px; /* Fixed height for consistency */
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .day-column {
+    flex: 1 1 100%; /* Each column takes up the full width */
+    margin-bottom: 16px; /* Space between columns */
+  }
+}

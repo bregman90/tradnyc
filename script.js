@@ -93,6 +93,12 @@ function displayEvents(events) {
     const dayColumn = document.getElementById(event.Weekday);
     if (dayColumn) {
       if (event.Weekday === today) {
+        // Change the background color of the day's title
+        const dayTitle = dayColumn.querySelector('.day-title');
+        if (dayTitle) {
+          dayTitle.style.backgroundColor = 'green';
+          dayTitle.style.color = 'white'; // Optional: change text color to white for better contrast
+        }
         dayColumn.classList.add('today-column');
       }
 
