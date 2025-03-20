@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const events = parseCSV(csvData);
       sortEventsByTime(events);  // Sort the events before displaying
       displayEvents(events);
+      adjustDayLayout();
     })
     .catch(error => {
       console.error('Error fetching data:', error);
     });
 
   generateKeyItems()
-  adjustDayLayout();
 
   // Add event listener to adjust layout on window resize
   window.addEventListener('resize', adjustDayLayout);
