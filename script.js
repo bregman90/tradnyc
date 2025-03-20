@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const events = parseCSV(csvData);
       sortEventsByTime(events);  // Sort the events before displaying
       displayEvents(events);
-      addNote()
     })
     .catch(error => {
       console.error('Error fetching data:', error);
@@ -105,14 +104,3 @@ function displayEvents(events) {
     }
   });
 }
-
-function addNote() {
-  const note = document.createElement('div');
-  note.classList.add('note');
-  note.innerHTML = `
-    <p><strong>Note for musicians:</strong> These sessions range from open, learner sessions (e.g. Mary O's) to professional, gig sessions (e.g. Dead Rabbit). A great resource for learning more is the <a href="https://www.facebook.com/groups/NYSessionHub/" target="_blank">Facebook NY Session Hub</a>.</p>
-  `;
-  
-  document.body.appendChild(note);  // Append the note to the body or container
-}
-

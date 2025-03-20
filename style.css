@@ -1,3 +1,15 @@
+body {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/5743511fd210b844041ed5ff/1464109877085-IMZ37PVADNFUNP8BHCA2/Welcome+to+Mary+O%27s?format=2500w');
+  background-size: cover; /* Scales image to cover entire viewport */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+  background-position: center; /* Centers the image */
+
+  
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust transparency */
+  background-blend-mode: multiply; /* Blend the color with the image */
+}
+
 .container {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping of items to the next line */
@@ -8,12 +20,15 @@
 
 h1 {
   margin-bottom: 10px; /* Reduce space below the title */
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .intro-text {
   font-style: italic;
   font-size: 1.5rem; /* Increase the font size */
-  color: #333; /* Dark grey */
+  color: white;
   margin-top: 3px;
   margin-bottom: 20px;
   text-align: left; /* Align to the left */
@@ -21,7 +36,7 @@ h1 {
 
 /* Each day's column */
 .day-column {
-  background-color: white;
+  background-color: lightblue;
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -30,7 +45,7 @@ h1 {
 }
 
 .today-column {
-  background-color: #e6f7e6; /* Light green background for today's column */
+  background-color: lightgoldenrodyellow; /* Light green background for today's column */
 }
 
 /* Styling specifically for Sunday */
@@ -48,7 +63,7 @@ h1 {
   margin-bottom: 12px;
   padding: 10px 30px; /* Added padding to create buffer around the title */
   border-radius: 8px; /* Rounded corners for the background */
-  background-color: #d3d3d3; /* Light grey background for all days */
+  background-color: white; /* Light grey background for all days */
   color: black; /* Black text */
   text-align: center; /* Center the text horizontally */
   display: flex; /* Use flexbox to center content */
@@ -63,7 +78,7 @@ h1 {
   margin-bottom: 12px;
   padding: 8px 20px 8px 8px;
   border-left: 4px solid #007bff;
-  background-color: #eef5ff;
+  background-color: white;
   border-radius: 4px;
 }
 
