@@ -42,10 +42,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-}
-
-.today-column {
-  background-color: #90EE90; 
+  min-width: 180px;
 }
 
 /* Styling specifically for Sunday */
@@ -54,6 +51,14 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
+
+/* Special color today */
+
+
+.day-title.today-title {
+  background-color: #4CAF50;
+  color: black;
 }
 
 /* Ensure Sunday title spans both columns */
@@ -72,6 +77,9 @@ h1 {
   height: 50px; /* Ensure some height to center the title */
   grid-column: span 2
 }
+
+
+
 
 /* Event styling */
 .event {
