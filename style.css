@@ -49,7 +49,8 @@ h1 {
   grid-column: span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  column-gap: 16px;  /* Apply the gap between columns */
+  row-gap: 0;  /* Remove the gap between rows */
 }
 
 
