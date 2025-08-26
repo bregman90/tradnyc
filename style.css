@@ -161,7 +161,6 @@ h1 {
   text-align: center;
   padding: 1rem;
   color: white; /* just the contact note text is white */
-  position: fixed;   /* stays at bottom of viewport */
   bottom: 0;
   width: 100%;
   font-size: 0.9rem;
