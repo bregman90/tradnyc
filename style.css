@@ -157,6 +157,22 @@ h1 {
   height: 40px; /* Fixed height for consistency */
 }
 
+.contact-note {
+  text-align: center;
+  padding: 1rem;
+  color: white; /* just the contact note text is white */
+  position: fixed;   /* stays at bottom of viewport */
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5); /* optional: semi-transparent for readability */
+}
+
+.contact-note a {
+  color: #ffd700; /* makes the email stand out */
+  text-decoration: underline;
+}
 
 /* Styling specifically for Sunday */
 
