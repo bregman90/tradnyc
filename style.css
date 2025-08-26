@@ -178,8 +178,8 @@ h1 {
   --wednesday-bg: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bouzouki_tetrachordo.jpg/320px-Bouzouki_tetrachordo.jpg');
   --thursday-bg: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Accord%C3%A9on_diatonique_B.Loffet_Graet_e_Breizh_3_rangs.jpg/330px-Accord%C3%A9on_diatonique_B.Loffet_Graet_e_Breizh_3_rangs.jpg');
   --friday-bg: url('https://upload.wikimedia.org/wikipedia/commons/8/85/UilleannPipes.jpg');
-  --saturday-bg: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Bodhran.jpg');
-  --sunday-bg: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Irish_Flute.jpg/320px-Irish_Flute.jpg');
+  --saturday-bg: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Irish_Flute.jpg/320px-Irish_Flute.jpg');
+  --sunday-bg: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Bodhran.jpg');
 }
 
 #Monday .day-title::before,
